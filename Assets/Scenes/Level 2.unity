@@ -1078,14 +1078,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
-    - target: {fileID: 8610857589591332610, guid: 577366320ee0019489744fc348dd3dbd, type: 3}
-      propertyPath: m_Constraints
-      value: 56
-      objectReference: {fileID: 0}
-    - target: {fileID: 8610857589591332610, guid: 577366320ee0019489744fc348dd3dbd, type: 3}
-      propertyPath: m_LinearDamping
-      value: 1.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1226,5 +1218,5 @@ SceneRoots:
   - {fileID: 322824417}
   - {fileID: 7473088601630522905}
   - {fileID: 1658902518}
-  - {fileID: 2808277722569246508}
   - {fileID: 3846849847321460628}
+  - {fileID: 2808277722569246508}

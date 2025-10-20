@@ -1074,6 +1074,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 802362491324182995, guid: 577366320ee0019489744fc348dd3dbd, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3849321815397642981, guid: 577366320ee0019489744fc348dd3dbd, type: 3}
       propertyPath: m_Name
       value: player
