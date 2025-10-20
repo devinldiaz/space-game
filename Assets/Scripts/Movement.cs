@@ -38,21 +38,31 @@ public class Movement : MonoBehaviour
     {
         if (thrust.IsPressed())
         {
-            rb.AddRelativeForce(Vector3.up * Time.fixedDeltaTime * thrustStrength);
-            if (!audioSource.isPlaying)
-            {
-                audioSource.PlayOneShot(mainEngine);
-            }
-            if (!mainBooster.isPlaying)
-            {
-                mainBooster.Play();
-            }
+            StartThrusting();
         }
         else
         {
-            audioSource.Stop();
-            mainBooster.Stop();
+            StopThrusting();
         }
+    }
+
+    private void StartThrusting()
+    {
+        rb.AddRelativeForce(Vector3.up * Time.fixedDeltaTime * thrustStrength);
+        if (!audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(mainEngine);
+        }
+        if (!mainBooster.isPlaying)
+        {
+            mainBooster.Play();
+        }
+    }
+
+    private void StopThrusting()
+    {
+        audioSource.Stop();
+        mainBooster.Stop();
     }
 
     private void ProcessRotation()
@@ -63,26 +73,33 @@ public class Movement : MonoBehaviour
 
         if (rotationInput < 0)
         {
-            ApplyRotation(rotationStrength);
-            if (!leftBooster.isPlaying)
-            {
-                leftBooster.Play();
-            }
-
+            RotateLeft();
         }
         else if (rotationInput > 0)
         {
-            ApplyRotation(-rotationStrength);
-            if (!rightBooster.isPlaying)
-            {
-                rightBooster.Play();
-            }
-
+            RotateRight();
         }
         else
         {
             leftBooster.Stop();
             rightBooster.Stop();
+        }
+    }
+    private void RotateLeft()
+    {
+        ApplyRotation(rotationStrength);
+        if (!leftBooster.isPlaying)
+        {
+            leftBooster.Play();
+        }
+    }
+
+    private void RotateRight()
+    {
+        ApplyRotation(-rotationStrength);
+        if (!rightBooster.isPlaying)
+        {
+            rightBooster.Play();
         }
     }
 
