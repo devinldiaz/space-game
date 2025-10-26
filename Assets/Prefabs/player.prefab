@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 8736849342387829143}
   - component: {fileID: 7737509654156151100}
   - component: {fileID: 1533143746391817688}
+  - component: {fileID: 4242385107048820081}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -338,6 +339,18 @@ MonoBehaviour:
   successSound: {fileID: 8300000, guid: 1306ea282a364bd4c9527344713cd986, type: 3}
   successParticles: {fileID: 7284385691436431760}
   crashParticles: {fileID: 2035734466529479697}
+--- !u!114 &4242385107048820081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3849321815397642981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3c0b5025f474b94b90e44c1696f5af4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuitApplication
 --- !u!1 &5854075354496825228
 GameObject:
   m_ObjectHideFlags: 0
